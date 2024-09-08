@@ -14,3 +14,6 @@ RUN usermod -aG sudo dev
 COPY ./.vimrc /home/dev
 USER dev
 WORKDIR /home/dev
+
+## The command line command for running a code-server container with the current host directory mounted on /workspace in the container.
+# docker run -v code_server_config_volume:/config -v .:/workspace -e PUID=1000 -e PGID=1000 -e DEFAULT_WORKSPACE=/workspace -p 8443:8443 linuxserver/code-server
