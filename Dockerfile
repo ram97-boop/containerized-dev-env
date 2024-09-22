@@ -5,6 +5,7 @@ RUN apt install -y sudo
 RUN apt install -y less
 RUN apt install -y file
 RUN apt install -y iproute2
+RUN apt update && apt install -y build-essential
 
 ENV TERM=xterm-color
 
@@ -14,6 +15,13 @@ RUN usermod -aG sudo dev
 COPY ./.vimrc /home/dev
 USER dev
 WORKDIR /home/dev
+
+COPY ./nasm-2.16.03.tar.gz /home/dev
+RUN tar -xzf nasm-2.16.03.tar.gz \
+    && cd nasm-2.16.03 \
+    && ./configure \
+    && make \
+    && sudo make install
 
 ## An example command to run a container of this image
 # docker run -it -v .:/home/dev dev-env
