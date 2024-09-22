@@ -5,6 +5,7 @@ RUN apt install -y sudo
 RUN apt install -y less
 RUN apt install -y file
 RUN apt install -y iproute2
+RUN apt install -y avr-libc avrdude avrdude-doc binutils-avr gcc-avr
 
 ENV TERM=xterm-color
 
