@@ -23,6 +23,8 @@ RUN tar -xzf nasm-2.16.03.tar.gz \
     && make \
     && sudo make install
 
+WORKDIR /home/dev/workspace
+
 ## An example command to run a container of this image
 # docker run -it -v .:/home/dev dev-env
 
