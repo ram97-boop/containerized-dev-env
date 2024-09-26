@@ -13,7 +13,7 @@ RUN passwd -d dev
 RUN usermod -aG sudo dev
 COPY ./.vimrc /home/dev
 USER dev
-WORKDIR /home/dev
+WORKDIR /home/dev/workspace
 
 ## An example command to run a container of this image
 # docker run -it -v .:/home/dev/workspace dev-env-nasm
