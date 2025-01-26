@@ -15,6 +15,9 @@ COPY ./.vimrc /home/dev
 USER dev
 WORKDIR /home/dev/workspace
 
+## An example command to build a container of this image
+# docker build -t <container-name> .
+
 ## An example command to run a container of this image
 # docker run -it -v .:/home/dev/workspace <container-name>
 
