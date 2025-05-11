@@ -6,9 +6,6 @@ RUN apt install -y less
 RUN apt install -y file
 RUN apt install -y iproute2
 
-COPY ./requirements.txt /etc/opt/requirements.txt
-RUN pip install -r /etc/opt/requirements.txt
-
 ENV TERM=xterm-color
 
 RUN useradd -m -s /usr/bin/bash developer
