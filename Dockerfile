@@ -6,9 +6,6 @@ RUN apt install -y less
 RUN apt install -y file
 RUN apt install -y iproute2
 
-COPY ./requirements.txt /etc/opt/requirements.txt
-RUN pip install -r /etc/opt/requirements.txt
-
 ENV TERM=xterm-color
 
 RUN useradd -m -s /usr/bin/bash developer
@@ -24,7 +21,7 @@ CMD ["bash"]
 # docker build -t <image-name> .
 
 ## An example command to run a container of this image
-# docker run -it -v .:/home/developer/workspace <image-name>
+# docker run -it -v .:/home/developer/workspace:z <image-name>
 
 ## The command line command for running a code-server container with the current host directory mounted on /workspace in the container.
 # docker run -v code_server_config_volume:/config -v .:/workspace -e PUID=1000 -e PGID=1000 -e DEFAULT_WORKSPACE=/workspace -p 8443:8443 linuxserver/code-server
