@@ -4,7 +4,9 @@ SELinux blocks the container's access to the directory /var/lib/code-server-conf
 I followed this guide: https://www.redhat.com/en/blog/supplemental-groups-podman-containers
 
 - create a group (e.g. codeserverconfig)
+  ```bash
   groupadd codeserverconfig
+  ```
 - add my user to the group
   usermod -a -G codeserverconfig <user>
 - change group access for the directory
