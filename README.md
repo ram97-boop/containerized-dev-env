@@ -39,4 +39,4 @@ I followed this guide: https://www.redhat.com/en/blog/supplemental-groups-podman
     docker.io/linuxserver/code-server:4.100.2-ls275
   ```
   which is the CLI equivalent to the docker-compose.yaml manifest
-
+- creating and running the container using the docker-compose.yaml will run into issues with SELinux, like editing the user and group ownership of the contents of /var/lib/code-server-config and the $HOME/projects directory itself.
