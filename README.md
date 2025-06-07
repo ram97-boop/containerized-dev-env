@@ -38,5 +38,5 @@ I followed this guide: https://www.redhat.com/en/blog/supplemental-groups-podman
     --annotation run.oci.keep_original_groups=1 \
     docker.io/linuxserver/code-server:4.100.2-ls275
   ```
-- above command is the CLI equivalent to the docker-compose.yaml
+  above command is the CLI equivalent to the docker-compose.yaml
 
